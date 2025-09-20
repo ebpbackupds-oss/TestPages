@@ -1,0 +1,32 @@
+:root{
+  --nx-navy:#0b2742;
+  --nx-teal:#12a9c7;
+  --nx-green:#0eb274;
+  --nx-muted:#a8bacb;
+  --nx-bg:#0f3247;
+  --nx-panel: rgba(255,255,255,.04);
+  --nx-border: rgba(255,255,255,.10);
+  --nx-radius: 16px;
+  --nx-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+.nxuc-page{background:linear-gradient(160deg, #081a2c, #0f3247); min-height:100vh; margin:0; color:#eaf3fb; font-family:ui-sans-serif,system-ui,Segoe UI,Roboto}
+.nxuc-container{max-width:980px; margin:40px auto; padding:0 16px}
+.nxuc{background:var(--nx-panel); border:1px solid var(--nx-border); border-radius:var(--nx-radius); padding:20px; box-shadow:var(--nx-shadow);}
+.nxuc__header{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+.nxuc__icon{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:linear-gradient(135deg, rgba(18,169,199,.25), rgba(14,178,116,.25)); border:1px solid var(--nx-border)}
+.nxuc__logo{width:56px;height:56px; border-radius:14px; object-fit:contain;opacity:.95}
+.nxuc__title{margin:0; font-size:34px; letter-spacing:.2px}
+.nxuc__subtitle{margin:0; font-size:20px}
+.nxuc__body{display:grid; grid-template-columns: 1fr auto; gap:16px; align-items:center; margin-top:14px}
+.nxuc__text{margin:.2rem 0 .8rem; color:#cfe8ff}
+.nxuc__anim{width:120px; height:120px; border-radius:16px; background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border:1px solid var(--nx-border); display:grid; place-items:center}
+.nxuc__actions{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+.nxuc__btn{background:linear-gradient(135deg, var(--nx-teal), var(--nx-green)); color:#032034; border:none; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer}
+.nxuc__ghost{background:transparent; border:1px dashed var(--nx-border); color:#cfe8ff; padding:10px 14px; border-radius:10px; font-weight:600}
+/* CSS fallback ring if Lottie not available */
+.nxuc__rig{position:relative; width:84px; height:84px}
+.nxuc__rig::before, .nxuc__rig::after{content:""; position:absolute; inset:0; border-radius:50%; mask: radial-gradient(circle at center, transparent 56%, #000 57%)}
+.nxuc__rig::before{background: conic-gradient(from 0deg, var(--nx-teal) 0 65%, transparent 65% 100%); animation:nxspin 2.6s linear infinite; filter: drop-shadow(0 0 8px rgba(18,169,199,.35))}
+.nxuc__rig::after{background: conic-gradient(from 180deg, var(--nx-green) 0 65%, transparent 65% 100%); animation:nxspin 2.6s linear infinite reverse}
+@keyframes nxspin{to{transform: rotate(1turn)}}
+@media (max-width: 720px){ .nxuc__body{grid-template-columns:1fr} .nxuc__actions{justify-content:flex-start} }
