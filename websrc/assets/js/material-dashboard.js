@@ -405,9 +405,11 @@ md = {
       /* ----------==========     Daily Sales Chart initialization    ==========---------- */
 
       dataDailySalesChart = {
-        labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+        labels: ['2020', '2021', '2022', '2023', '2024'],
         series: [
-          [12, 17, 7, 17, 23, 18, 38]
+          [12, 10, 11, 13, 14],
+          [10, 12, 13, 14, 15],
+          [ 8,  9, 10, 11, 12]
         ]
       };
 
@@ -415,8 +417,8 @@ md = {
         lineSmooth: Chartist.Interpolation.cardinal({
           tension: 0
         }),
-        low: 0,
-        high: 50,
+        low: 5,
+        high: 20,
         chartPadding: {
           top: 0,
           right: 0,
@@ -434,9 +436,9 @@ md = {
       /* ----------==========     Completed Tasks Chart initialization    ==========---------- */
 
       dataCompletedTasksChart = {
-        labels: ['12p', '3p', '6p', '9p', '12p', '3a', '6a', '9a'],
+        labels: ['2020', '2021', '2022', '2023', '2024'],
         series: [
-          [230, 750, 450, 300, 280, 240, 200, 190]
+          [112.9,148.4,124.2,159.7,150.4]
         ]
       };
 
@@ -444,8 +446,8 @@ md = {
         lineSmooth: Chartist.Interpolation.cardinal({
           tension: 0
         }),
-        low: 0,
-        high: 1000,
+        low: 100,
+        high: 180,
         chartPadding: {
           top: 0,
           right: 0,
@@ -463,10 +465,9 @@ md = {
       /* ----------==========     Emails Subscription Chart initialization    ==========---------- */
 
       var dataWebsiteViewsChart = {
-        labels: ['J', 'F', 'M', 'A', 'M', 'J', 'J', 'A', 'S', 'O', 'N', 'D'],
+        labels: ['2020', '2021', '2022', '2023', '2024'],
         series: [
-          [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895]
-
+          [9.2, 12.2, 11.1, 14.8, 15]
         ]
       };
       var optionsWebsiteViewsChart = {
@@ -474,7 +475,7 @@ md = {
           showGrid: false
         },
         low: 0,
-        high: 1000,
+        high: 20,
         chartPadding: {
           top: 0,
           right: 5,
